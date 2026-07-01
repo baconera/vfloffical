@@ -1,8 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VFL League</title>
+
+<style>
 body{
     margin:0;
     font-family:Arial, sans-serif;
     background:#0b0f17;
     color:white;
+    scroll-behavior:smooth;
 }
 
 /* NAV */
@@ -26,16 +35,50 @@ body{
     color:white;
     margin-left:20px;
     text-decoration:none;
+    transition:0.3s;
 }
 
 .nav a:hover{
     color:#ff7a00;
 }
 
+/* HERO */
+.hero{
+    text-align:center;
+    padding:90px 20px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    color:#aaa;
+    font-size:18px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 30px;
+    background:#ff7a00;
+    color:white;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+    background:#ff9a3c;
+}
+
 /* SECTIONS */
 .section{
     max-width:1100px;
-    margin:50px auto;
+    margin:60px auto;
     padding:0 20px;
 }
 
@@ -51,22 +94,19 @@ body{
     padding:20px;
     border-radius:15px;
     border:1px solid #222;
+    transition:0.3s;
 }
 
-/* BUTTON */
-.btn{
-    display:inline-block;
-    padding:12px 25px;
-    background:#ff7a00;
-    color:white;
-    border-radius:10px;
-    text-decoration:none;
+.card:hover{
+    transform:translateY(-6px);
+    border-color:#ff7a00;
 }
 
 /* TABLE */
 table{
     width:100%;
     border-collapse:collapse;
+    margin-top:20px;
 }
 
 th, td{
@@ -82,3 +122,84 @@ th{
 tr:hover{
     background:#1a2230;
 }
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:40px;
+    color:#777;
+    border-top:1px solid #222;
+    margin-top:60px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav">
+    <h1>🏈 VFL</h1>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#standings">Standings</a>
+    </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <h1>VFL League</h1>
+    <p>The most competitive football league</p>
+    <a class="btn" href="#standings">View Standings</a>
+</section>
+
+<!-- FEATURED GAMES -->
+<section class="section">
+    <h2>🔥 Featured Games</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Wolves vs Titans</h3>
+            <p>24 - 17</p>
+            <p>Final</p>
+        </div>
+
+        <div class="card">
+            <h3>Hawks vs Sharks</h3>
+            <p>14 - 21</p>
+            <p>Final</p>
+        </div>
+
+        <div class="card">
+            <h3>Lions vs Bulls</h3>
+            <p>Coming Soon</p>
+        </div>
+    </div>
+</section>
+
+<!-- STANDINGS -->
+<section class="section" id="standings">
+    <h2>🏆 Standings</h2>
+
+    <table>
+        <tr>
+            <th>Rank</th>
+            <th>Team</th>
+            <th>W</th>
+            <th>L</th>
+        </tr>
+
+        <tr><td>1</td><td>Wolves</td><td>7</td><td>1</td></tr>
+        <tr><td>2</td><td>Titans</td><td>6</td><td>2</td></tr>
+        <tr><td>3</td><td>Hawks</td><td>5</td><td>3</td></tr>
+        <tr><td>4</td><td>Sharks</td><td>4</td><td>4</td></tr>
+    </table>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 VFL League • Built for competition
+</footer>
+
+</body>
+</html>
